@@ -1,14 +1,24 @@
+---
+const pageTitle = "Mój blog";
+---
+
+
 <html lang="pl">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Blog</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/">Strona Główna</a>
         <a href="/about">O mnie</a>
         <a href="/blog">Blog</a>
-        <h1>Blog</h1>
+        <h1>{pageTitle}</h1>
         <p>tutaj znajdziesz wszystkie moje wpisy na temat finansów.</p>
+        <ul>
+            <li><a href="/posts/post_1">Moje początki z blogiem</a></li>
+            <li><a href="/posts/post_2">Nowa misja?</a></li>
+            <li><a href="/posts/post_3">Moje plany na przyszłość</a></li>
+        </ul>
     </body>
 </html>

@@ -1,17 +1,36 @@
+---
+const pageTitle = "O mnie";
+const identity = {
+    firstname: "Magdalena",
+    country: "Polski",
+    profession: "Specjalista IT",
+    interests: ["programowanie", "finanse i inwestycje", "czytanie książek", "malowanie i rysowanie"],
+};
+const skills = ["HTML", "CSS", "SQL", "C#", "OCR - IRIS XTRACT", "Python."];
+
+const happy = true;
+const finished = false;
+---
+
 <html lang="pl">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>o mnie</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
         <a href="/">Strona Główna</a>
         <a href="/about">O mnie</a>
         <a href="/blog">Blog</a>
-        <h1>kim jestem?</h1>
+        <h1>{pageTitle}</h1>
+        <p>Nazywam się {identity.firstname} i pochodzę z {identity.country}.</p>
+        <p>Obecnie pracuję jako {identity.profession}.</p>
         <p>Jestem entuzjastką nowych technologii, programowania i finansów.</p>
+        <p>Moje umiejętności: {skills.join(", ")}</p>
         <p>Ta strona nie zawiera jeszcze zbyt wielu informacji o mnie.</p>
         <p>Stopniowo będę ulepszać tę stronę i dodawać więcej ciekawych treści.</p>
         <p>Dzięki za odwiedziny!</p>
+        {happy && <p>Fajnie, że uczę się Astro!</p>}
+        {finished && <p>Skończyłam tutorial!</p>}
     </body>
 </html>
