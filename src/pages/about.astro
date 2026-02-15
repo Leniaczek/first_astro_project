@@ -1,4 +1,8 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 const pageTitle = "O mnie";
 const identity = {
     firstname: "Magdalena",
@@ -6,10 +10,14 @@ const identity = {
     profession: "Specjalista IT",
     interests: ["programowanie", "finanse i inwestycje", "czytanie książek", "malowanie i rysowanie"],
 };
-const skills = ["HTML", "CSS", "SQL", "C#", "OCR - IRIS XTRACT", "Python."];
+const skills = ["HTML", "CSS", "SQL", "C#", "OCR - IRIS XTRACT", "Python"];
 
 const happy = true;
 const finished = false;
+
+const skillColor = "crimson";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="pl">
@@ -17,20 +25,32 @@ const finished = false;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{pageTitle}</title>
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
+            }
+
+        </style>
     </head>
     <body>
-        <a href="/">Strona Główna</a>
-        <a href="/about">O mnie</a>
-        <a href="/blog">Blog</a>
+        <Header />
         <h1>{pageTitle}</h1>
         <p>Nazywam się {identity.firstname} i pochodzę z {identity.country}.</p>
         <p>Obecnie pracuję jako {identity.profession}.</p>
         <p>Jestem entuzjastką nowych technologii, programowania i finansów.</p>
-        <p>Moje umiejętności: {skills.join(", ")}</p>
+        <p>Moje umiejętności:</p>
+        <ul>
+            {skills.map((skill) => 
+                <li class="skill">{skill}</li>
+            )}
+        </ul>
         <p>Ta strona nie zawiera jeszcze zbyt wielu informacji o mnie.</p>
         <p>Stopniowo będę ulepszać tę stronę i dodawać więcej ciekawych treści.</p>
         <p>Dzięki za odwiedziny!</p>
         {happy && <p>Fajnie, że uczę się Astro!</p>}
         {finished && <p>Skończyłam tutorial!</p>}
+        <Footer />
     </body>
 </html>
