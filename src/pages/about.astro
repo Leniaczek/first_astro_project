@@ -1,7 +1,5 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "O mnie";
 const identity = {
@@ -14,29 +12,9 @@ const skills = ["HTML", "CSS", "SQL", "C#", "OCR - IRIS XTRACT", "Python"];
 
 const happy = true;
 const finished = false;
-
-const skillColor = "crimson";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
-<html lang="pl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-                text-transform: var(--textCase);
-            }
-
-        </style>
-    </head>
-    <body>
-        <Header />
-        <h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
         <p>Nazywam się {identity.firstname} i pochodzę z {identity.country}.</p>
         <p>Obecnie pracuję jako {identity.profession}.</p>
         <p>Jestem entuzjastką nowych technologii, programowania i finansów.</p>
@@ -51,6 +29,4 @@ const textCase = "uppercase";
         <p>Dzięki za odwiedziny!</p>
         {happy && <p>Fajnie, że uczę się Astro!</p>}
         {finished && <p>Skończyłam tutorial!</p>}
-        <Footer />
-    </body>
-</html>
+</BaseLayout>

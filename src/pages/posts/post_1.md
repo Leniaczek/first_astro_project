@@ -1,17 +1,12 @@
 ---
-tytuł: 'Mój pierwszy wpis na blogu'
-data publikacji: 05.02.2026
-opis: 'To jest mój pierwszy wpis na tym ekspertmentalnym blogu.'
-autor: Magdalena Banasik
-obraz: 
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'logo Astro na ciemnym tle z różową poświatą.'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'Mój pierwszy wpis na blogu'
+date: 05.02.2026
+description: 'To jest mój pierwszy wpis na tym ekspertmentalnym blogu.'
+author: Magdalena Banasik
 tags: ["astro", "blog", "finanse"]
 ---
-# Mój pierwszy wpis na blogu
-
-Opublikowany: 05.02.2026
-
+# Jak do tego doszło - nie wiem...
 Nigdy nie sądziłam, że samodzielnie zbuduję swojego bloga, tym bardziej o finansach, aby móc dzielić się swoją pasją z innymi. 
 
 # Co dalej?
