@@ -4,7 +4,7 @@ title: 'Trudne słowa - Kwalifikacje i kompetencje'
 date: 05.02.2026
 description: 'Dzielenie się wiedzą'
 author: Magdalena Banasik
-tags: ["astro", "blog", "finanse", "dzielenie się wiedzą"]
+tags: ["nauka"]
 ---
 # Wykształcenie - a po co to komu?
 

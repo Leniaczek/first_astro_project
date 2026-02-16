@@ -4,7 +4,7 @@ title: 'Nowa Misja?'
 date: 05.02.2026
 description: 'Dzielenie się wiedzą'
 author: Magdalena Banasik
-tags: ["astro", "blog", "finanse", "dzielenie się wiedzą"]
+tags: ["blog", "finanse", "nauka"]
 ---
 # Pisanie bloga o finansach i może nie tylko...?
 
